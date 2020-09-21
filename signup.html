@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="CSS/share.css">
+    <link rel="stylesheet" href="CSS/signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src = "http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src = "Javascript/signup.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class = "shadow">
+            <div class="menu">
+                <div class="site-logo"><a href="main.html">SSM</a></div>
+                <ul class="menu-container">
+                    <li class="menu-item"><a href="main.html">메인</a></li>
+                    <li class="menu-item"><a href="ranking.html">랭킹</a></li>
+                    <li class="menu-item"><a href="login.html">로그인</a></li>
+                </ul>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-box" placeholder=" 입력">
+                <button type="submit" id="search-button">검색</button>
+            </div>
+        </div>
+    </header>
+   <section>
+
+    <div class = "top">
+        <p>회원 가입</p>
+    </div>
+
+    <form action = "#" accept-charset="utf-8" name = "person_info" method = "get">
+        <fieldset>
+                <div>
+                    <label for = "name">이름 : </label>
+                    <input type = "text" name = "name" id = "name"/>
+                </div>
+                <div>
+                    <label for = "security_number">주민번호 : </label>
+                    <input type = "text" name = "front_security" id = "front_security" maxlength = '6'/> - <input type = "password" name = "back_security" id = "back_security" maxlength = '7'/>
+                </div>
+                <div>
+                    <label for = "identification_code">아이디 : </label>
+                    <input type = "text" name = "identification_code" id = "identification_code"/>
+                </div>
+                <div>
+                    <label for = "password">비밀번호 : </label>
+                    <input type = "password" name = "password" id = "password" />
+                </div>
+                <div>
+                    <label for = "password_check">비밀번호 확인 : </label>
+                    <input type = "password" name = "password_check" id = "password_check"/>
+                    <p id = "password_notice"></p>
+                </div>
+                <div>
+                    <label for = "phone_number">전화번호 : </label>
+                    <select id = "phone_dns">
+                        <option value = "010">010</option>
+                        <option value = "011">011</option>
+                        <option value = "012">012</option>
+                        <option value = "02">02</option>
+                    </select>
+                    - <input type = "text" name = "front_phone" id = "front_phone" maxlength = '4' /> - <input type = "text" name = "back_phone" id = "back_phone" maxlength= "4"/>
+                </div>
+                <div>
+                    <label for = "email">이메일 : </label>
+                    <input type = "text" name = "email" id = "email"/>@<input type = "text" name = "dns" id = "dns"/>
+                    <select id = "email_dns">
+                        <option value="naver.com">naver.com</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="">직접입력</option>
+                    </select>
+                </div>
+                <div>
+                    <label for = "mail_check">정보 수신 동의 : </label>
+                    <input type = "radio" name = "mail_check"> 동의 <input type = "radio" name = "mail_check"> 거부
+                </div>
+        </fieldset>
+        <div class = "button">
+            <button type = "submit" id = 'register'>회원가입</button>
+            <button type = "reset">취소</button>
+        </div>
+    </form>
+   </section>
+</body>
+
+</html>
